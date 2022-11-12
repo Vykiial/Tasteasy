@@ -1,20 +1,50 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This isn't hello world</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+      {/* Logo */}
+      <View></View>
+      {/* App Name and Welcome */} 
+      <View></View> 
+      <View> 
+        <TextInput placeholder='Username/Email'/>
+        <TextInput placeholder='Password'/>
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <TouchableOpacity style={styles.button}>
+            <View>
+              <Text style={styles.buttonText}>Sign In</Text>
+            </View> 
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <View>
+              <Text style={styles.buttonText}>Login</Text>
+            </View> 
+          </TouchableOpacity>
+        </View>
+      </View>
+      {/* Continue as Guest */}
+      <View></View>
+    </View> 
+  ); 
+} 
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'purple',
-    alignItems: 'center',
+    padding: '5%',
+  },
+  button: {
+    margin: 0,
+    padding: '2%',
+    width: '40%',
+    borderColor: '#cccccc',
+    borderWidth: 1,
+    alignContent: 'center',
     justifyContent: 'center',
   },
+  buttonText: {
+    textAlign: 'center',
+  }
 });
